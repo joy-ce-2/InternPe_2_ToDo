@@ -1,0 +1,170 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1512675559587-8a91082206ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=412&q=80");
+  background-size: cover;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-input {
+  width: 250px;
+  border-radius: 1rem;
+  background-color: #300a32;
+  padding: 0.7rem;
+  font-size: 20px;
+  border-style: hidden;
+}
+
+#new-task-input::placeholder {
+  color: #d1c4d1a8;
+}
+
+#new-task-submit {
+  color: #ec4899;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: 0.4s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-left: 20px;
+}
+
+main {
+  text-align: center;
+  margin-top: 50px;
+}
+
+main section h2 {
+  font-size: 30;
+  color: rgba(255, 255, 255, 0.3);
+}
+.content input {
+  background-color: #300a32;
+  border-radius: 1rem;
+  width: 330px;
+  color: white;
+  height: 30px;
+  padding: 6px;
+  padding-left: 30px;
+}
+.edit {
+  background-image: linear-gradient(to right, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.delete {
+  background-image: linear-gradient(to right, white, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.edit {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+.edit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: none;
+  transition: all 0.3s;
+}
+.edit:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.edit::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  padding: 2px;
+  padding-top: 2px;
+  transform: scale(1.2, 1.2);
+}
+.edit:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.delete {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+}
+.delete::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: none;
+  transition: all 0.3s;
+}
+.delete:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.delete::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  padding: 2px;
+  padding-top: 2px;
+  transform: scale(1.2, 1.2);
+}
+.delete:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+}
+.actions {
+  margin-left: 40px;
+  margin-top: 30px;
+}
